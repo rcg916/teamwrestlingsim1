@@ -1,0 +1,17 @@
+<h2>show page for games</h2>
+
+<%= @game.teamname %> , <%= @game.coachname %>
+
+<%= @game.weeknum %> , <%= @game.monthnum %> , <%= @game.yearnum %>
+
+<%= link_to 'Advance', advance_path %>
+
+<br /><br />
+
+<% if @game.weeknum == 1 %>
+	Recruiting Week
+<% elsif @game.weeknum == 2 %>
+	Training Camp
+<% elsif @game.weeknum == 3 %>
+	Ind Tourney
+<% end %>
